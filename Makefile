@@ -4,7 +4,7 @@
 # The information of release is taken from https://chromereleases.googleblog.com/search/label/Stable%20updates
 #A list of the current branch names can be found in the releases.txt file
 TARGET = chromiumos
-BRANCH = release-R80-12739.B
+BRANCH = release-R79-12607.B
 
 BOARD_ARM = arm-generic
 BOARD_X86 = x86-generic
