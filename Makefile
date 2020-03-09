@@ -1,8 +1,10 @@
-
+# Reserected by WindowsXP95
+# A special thanks goes to jam7 for making the original script
 # BRANCH name is taken from https://chromium.googlesource.com/chromiumos/manifest/+refs
 # The information of release is taken from https://chromereleases.googleblog.com/search/label/Stable%20updates
+#A list of the current branch names can be found in the releases.txt file
 TARGET = chromiumos
-BRANCH = release-R60-9592.B
+BRANCH = release-R80-12739.B
 
 BOARD_ARM = arm-generic
 BOARD_X86 = x86-generic
