@@ -6,6 +6,7 @@
 TARGET = chromiumos
 BRANCH = release-R84-13099.B
 
+# Boards Selection. More will be added
 BOARD_ARM = arm-generic
 BOARD_X86 = x86-generic
 BOARD_X64 = amd64-generic
