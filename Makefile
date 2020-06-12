@@ -95,13 +95,4 @@ x86dq:
 x64dq:
 	qemu-img convert -f raw -O qcow2  ${TARGET}/src/build/images/${BOARD_X64}/latest/chromiumos_qemu_image.bin dist/chromiumos_qemu_image-$(basename $(shell readlink ${TARGET}/src/build/images/${BOARD_X64}/latest))-${BOARD_X64}.qcow2
 
-
-clean: FORCE
-	cd ${TARGET}; cros_sdk --delete
-
-distclean: clean FORCE
-	cd ${TARGET}; cros_sdk --delete
-	rm -rf depot_tools
-	rm -rf ${TARGET}
-
 FORCE:
