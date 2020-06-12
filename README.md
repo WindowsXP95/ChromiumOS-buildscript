@@ -1,5 +1,5 @@
-# chromeos-build
-Scripts to build Chrome OS easily
+# CrOS Builder Kit
+Scripts to build Chrome OS/ Chromium OS easily
 
 ## How to run Chromium OS on KVM
 
@@ -19,7 +19,7 @@ I'll list them for the ease.  **Bold** means new or different prerequisities fro
 - ubuntu **16.04 works**
 - x86_64 64 bit system
 - an account with sudo access
-- **16** GB RAM for arm and x86.  **20** GB RAM for amd64.  (For example, amd64 uses gold-linker, but it still uses 12G.  The whole system uses at least 18 GB.)
+- **8-16** GB RAM for arm and x86 amd64.  However, **20** GB RAM for amd64.  (For example, amd64 uses gold-linker, but it still uses 12G.  The whole system uses at least 18 GB.)
 - git and curl
 - configure git
 - tweak sudoers for **400** minutes (My machine takes more than 180 min for compilation)
