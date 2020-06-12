@@ -1,7 +1,7 @@
 # Chromium/Chrome release names
 # List by WindowsXP95
-# revision1_
-# Updated 4/9/20
+# revision_1.1
+# Updated 6/12/20
 release-1011.B
 release-R16-1193.B
 release-R17-1412.B
@@ -68,3 +68,8 @@ release-R78-12499.B
 release-R79-12607.B
 release-R80-12739.B
 release-R81-12871.B
+release-R82-12974.B
+release-R83-13020.B
+release-R84-13099.B
+
+
