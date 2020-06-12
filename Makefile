@@ -4,12 +4,13 @@
 # The information of release is taken from https://chromereleases.googleblog.com/search/label/Stable%20updates
 #A list of the current branch names can be found in the releases.txt file
 TARGET = chromiumos
-BRANCH = release-R80-12739.B
+BRANCH = release-R84-13099.B
 
 BOARD_ARM = arm-generic
 BOARD_X86 = x86-generic
 BOARD_X64 = amd64-generic
 
+# This can be changed to the amount of cores. The default is 4.
 NPROC = 4
 
 export PATH := ${PWD}/depot_tools:${PATH}
