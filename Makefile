@@ -38,19 +38,19 @@ ${TARGET}: FORCE
 images: arm x86 x64
 
 arm:
-	cd ${TARGET}; cros_sdk -- ./setup_board --board=${BOARD_ARM}
+	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_ARM}
 	cd ${TARGET}; cros_sdk -- ./set_shared_user_password.sh chronos
 	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_ARM} --nowithdebug
 	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_ARM} --noenable_rootfs_verification dev
 
 x86:
-	cd ${TARGET}; cros_sdk -- ./setup_board --board=${BOARD_X86}
+	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_X86}
 	cd ${TARGET}; cros_sdk -- ./set_shared_user_password.sh chronos
 	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_X86} --nowithdebug
 	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_X86} --noenable_rootfs_verification dev
 
 x64:
-	cd ${TARGET}; cros_sdk -- ./setup_board --board=${BOARD_X64}
+	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_X64}
 	cd ${TARGET}; cros_sdk -- ./set_shared_user_password.sh chronos
 	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_X64} --nowithdebug
 	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_X64} --noenable_rootfs_verification dev
