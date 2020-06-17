@@ -7,7 +7,8 @@ TARGET = chromiumos
 BRANCH = release-R84-13099.B
 
 # Boards Selection. More will be added
-BOARD_ARM = arm-generic
+BOARD_ARM32 = arm-generic
+BOARD_ARM64= arm64-generic
 BOARD_X86 = x86-generic
 BOARD_X64 = amd64-generic
 
@@ -35,13 +36,20 @@ ${TARGET}: FORCE
 # build images with "chronos" password for "chronos" user
 # images are placed under ${TARGET}/src/build/images/
 
-images: arm x86 x64
+images: arm32 arm64  x86 x64
 
-arm:
-	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_ARM}
+arm32:
+	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_ARM32}
 	cd ${TARGET}; cros_sdk -- ./set_shared_user_password.sh chronos
-	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_ARM} --nowithdebug
-	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_ARM} --noenable_rootfs_verification dev
+	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_ARM32} --nowithdebug
+	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_ARM32} --noenable_rootfs_verification dev
+	
+arm64:
+	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_ARM64}
+	cd ${TARGET}; cros_sdk -- ./set_shared_user_password.sh chronos
+	cd ${TARGET}; cros_sdk -- ./build_packages --board=${BOARD_ARM64} --nowithdebug
+	cd ${TARGET}; cros_sdk -- ./build_image --board=${BOARD_ARM64} --noenable_rootfs_verification dev
+
 
 x86:
 	cd ${TARGET}; cros_sdk -- setup_board --board=${BOARD_X86}
